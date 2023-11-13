@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav{
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  background-color: #5c6a58;
+}
+.nav-toggle,.home-icon{
+  cursor: pointer;
+}
+.nav-menu{
+  position: absolute;
+  top: 3em;
+  left: 0em;
+  z-index: 1;
+  background-color: white;
+  height: 100vh;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-100%);
+  max-width: 300px;
+}
+.nav-menu.visible{
+
+  transform: translateX(0);
+}
+.nav-items{
+  list-style: none;
+  padding: 0.5em 1em;
+}
+.item{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 0;
+  font-size:1.2em;
+  cursor: pointer;
+}
+
+.main{
+  background-color: rgba(228, 225, 225, 0.714);
+  margin: 0.5em 0;
+  padding: 1.5em 2.5em;
+}
+
+.main .main-heading{
+  font-weight: 500;
+}
+.chart-layout{
+  display: flex;
+  flex-direction: column; 
+  padding-top: 1em;
+}
+.chart-layout .heading{
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.weekdays{
+  background-color: rgba(195, 192, 192, 0.796);
+  overflow-x: auto;
+}
+
+table{
+  width: 100%;
+  padding: .5em 1em;
+}
+th, td{
+  padding: .5em;
+  text-align: center;
+  text-transform: capitalize;
+}
+.color{
+  /* background-color: green; */
+  max-width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 0 auto;
+}
+.color.green{
+  background-color: green;
+}
+.color.red{
+  background-color: red;
+}
+
+.homework-graph{
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+.homework, .graph{
+  padding: 0.5em;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(195, 192, 192, 0.796);
+  text-transform: capitalize;
+  height: fit-content;
+}
+.homework>h4{
+  text-align: center;
+}
+.graph>h4{
+  text-align: center;
+}
+.subjects{
+  padding: 1em;
+}
+.subject{
+  padding: 0.5em;
+  font-weight: 500 ;
+}
+
+@media screen and (min-width: 768px)  {
+  .nav{
+    padding: 0.5em 3em;
+  }
+}
